@@ -369,13 +369,16 @@ git commit -m "feat: expose wallet billing recharge and admin model APIs"
 ## Task 8: Add commercial frontend APIs and route guards
 
 **Files:**
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\api\wallet\index.ts`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\api\billing\index.ts`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\api\admin\billing.ts`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\api\admin\model-channel.ts`
-- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\api\auth\index.ts`
-- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\`
-- Test: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\api\wallet\index.test.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\api\request.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\auth\session.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\api\wallet.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\api\billing.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\api\recharges.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\api\model-channels.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\router\routes.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\router\routes.ts`
+- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\index.ts`
+- Test: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\api\wallet.test.ts`
 
 **Step 1: Write failing frontend API tests or type checks**
 
@@ -413,13 +416,14 @@ git commit -m "feat: add frontend billing and admin API clients"
 ## Task 9: Add user billing overview and account pages
 
 **Files:**
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\account\WalletOverview.vue`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\account\BillingRecords.vue`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\components\billing\BillingOverviewCards.vue`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\components\billing\BillingRecordsTable.vue`
-- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\login\`
-- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\layout\`
-- Test: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\account\WalletOverview.spec.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\views\account\WalletOverview.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\views\account\BillingRecords.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\components\billing\BalanceSummaryCards.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\components\billing\BillingRecordsTable.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\stores\account.ts`
+- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\index.ts`
+- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\stores\menu.ts`
+- Test: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\views\account\WalletOverview.spec.ts`
 
 **Step 1: Write failing component tests or snapshots**
 
@@ -457,12 +461,14 @@ git commit -m "feat: add user wallet and billing overview pages"
 ## Task 10: Add admin console pages for users, recharge, and model channels
 
 **Files:**
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\admin\UserManagement.vue`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\admin\ManualRecharge.vue`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\admin\ModelChannelManagement.vue`
-- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\components\admin\ManualRechargeDialog.vue`
-- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\`
-- Test: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\views\admin\ModelChannelManagement.spec.ts`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\views\UserManagement.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\views\ManualRecharge.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\views\ModelChannelManagement.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\components\ManualRechargeDialog.vue`
+- Create: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\stores\adminCommercial.ts`
+- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\index.ts`
+- Modify: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\stores\menu.ts`
+- Test: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\views\ModelChannelManagement.spec.ts`
 
 **Step 1: Write failing UI tests or snapshots**
 
@@ -815,6 +821,276 @@ Defer until the WeKnora control plane is stable:
 
 ## Immediate executable Phase 1 task breakdown
 
+## Frontend-first file organization and module boundary plan
+
+This section is the Phase 1 code-organization baseline. The goal is to keep the current WeKnora runtime and build pipeline, but isolate frontend code into user-side, admin-side, and shared layers so later changes stay low-risk and local.
+
+### Approved isolation approach
+
+Adopt a single frontend repo with three explicit partitions:
+
+- `frontend/src/apps/user/*` for normal-user product code
+- `frontend/src/apps/admin/*` for management-console code
+- `frontend/src/shared/*` for truly shared infrastructure only
+
+This is the approved Phase 1 frontend isolation strategy because it gives real separation without introducing a second Vite project, a second deployment pipeline, or duplicated auth/request infrastructure.
+
+### Target frontend directories for Phase 1
+
+#### Root-level shell retained
+
+Keep these root entries small and orchestration-only:
+
+- Reuse: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\main.ts`
+- Modify lightly: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\App.vue`
+- Modify lightly: `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\index.ts`
+
+Root-level files should only bootstrap the app, assemble route modules, and mount the correct layout shell. They must not become a new business-logic dumping ground.
+
+#### User-side isolated code
+
+Create:
+
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\api\`
+  - `wallet.ts`
+  - `billing.ts`
+  - `recharge.ts`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\stores\`
+  - `account.ts`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\views\account\`
+  - `WalletOverview.vue`
+  - `BillingRecords.vue`
+  - `RechargeRecords.vue` (optional late Phase 1)
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\components\billing\`
+  - `BalanceSummaryCards.vue`
+  - `BillingRecordsTable.vue`
+  - `RechargeStatusTag.vue`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\router\`
+  - `routes.ts`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\user\layout\`
+  - user-side wrappers only if current platform layout cannot stay flat
+
+#### Admin-side isolated code
+
+Create:
+
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\api\`
+  - `users.ts`
+  - `recharges.ts`
+  - `model-channels.ts`
+  - `pricing.ts` (only if Phase 1 pricing is exposed)
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\stores\`
+  - `adminCommercial.ts`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\views\`
+  - `UserManagement.vue`
+  - `ManualRecharge.vue`
+  - `ModelChannelManagement.vue`
+  - `UsageOverview.vue` (optional and hidable)
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\components\`
+  - `ManualRechargeDialog.vue`
+  - `ModelChannelForm.vue`
+  - `UserBalanceTable.vue`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\router\`
+  - `routes.ts`
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\apps\admin\layout\`
+  - admin wrappers only if needed
+
+#### Shared layer only for true cross-cutting code
+
+Create or migrate only genuinely shared code into:
+
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\api\`
+  - request client
+  - interceptors
+  - HTTP base config
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\auth\`
+  - auth persistence helpers
+  - role / capability helpers
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\components\`
+  - pure generic UI only
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\types\`
+  - cross-app DTOs only
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\shared\utils\`
+  - formatting / utility functions only
+
+Do not move business pages into `shared`. Shared is infrastructure, not a third business app.
+
+### Isolation rules
+
+#### Dependency direction
+
+Allowed:
+- `apps/user -> shared`
+- `apps/admin -> shared`
+- root bootstrap -> `apps/user`, `apps/admin`, `shared`
+
+Forbidden:
+- `apps/user -> apps/admin`
+- `apps/admin -> apps/user`
+- business logic in root router/store files
+
+This rule is what makes the isolation real instead of nominal.
+
+#### Store ownership
+
+- `shared/auth/*` owns token persistence, current identity hydration, and auth helper primitives
+- `apps/user/stores/account.ts` owns wallet, billing overview, billing filters, recharge history
+- `apps/admin/stores/adminCommercial.ts` owns user list, recharge operator state, model-channel management state
+
+Do not store wallet summary, admin list state, or billing tables in the old global `auth.ts` beyond backward-compatible bridging during transition.
+
+#### API ownership
+
+- `apps/user/api/*` contains only user-facing commercial API wrappers
+- `apps/admin/api/*` contains only admin-facing commercial API wrappers
+- `shared/api/*` contains only request base and transport helpers
+
+Do not place user and admin request wrappers in the same directory anymore.
+
+#### View/component ownership
+
+- `apps/user/views/*` and `apps/user/components/*` are for user product flows only
+- `apps/admin/views/*` and `apps/admin/components/*` are for admin flows only
+- `shared/components/*` may contain buttons, tables, dialogs, and status tags only if they are domain-neutral
+
+If a component contains recharge-specific or model-channel-specific behavior, it does not belong in `shared`.
+
+### Routing and menu assembly under isolation
+
+#### Router strategy
+
+Keep one root router file:
+
+- `D:\AAAlimenAI\wechat_bot\WeKnora\frontend\src\router\index.ts`
+
+But move business route definitions out of it:
+
+- `apps/user/router/routes.ts`
+- `apps/admin/router/routes.ts`
+
+Root router responsibilities:
+- import user/admin route arrays
+- merge them into the current platform route tree
+- keep global auth guard registration
+- evaluate `requiresAuth` and `requiresAdmin`
+
+Business route modules responsibilities:
+- declare their own pages only
+- not perform token mutation logic
+
+Recommended route prefixes:
+- user: `/platform/account/*`
+- admin: `/platform/admin/*`
+
+#### Menu strategy
+
+Current menu state should be progressively reduced to a shell assembler.
+
+Recommended split:
+- `apps/user` exports user menu definitions
+- `apps/admin` exports admin menu definitions
+- root-level menu store assembles visible entries based on auth role/capability
+
+That means the existing `frontend/src/stores/menu.ts` should become a composition layer, not the long-term home of all account/admin menu definitions.
+
+### Transition plan for minimal modification
+
+To preserve minimal-change delivery, do not refactor the whole old frontend before adding commercial pages. Instead apply a staged move:
+
+#### Stage 1: keep old business modules running
+
+Do not relocate current knowledge base / agent / chat / organization pages yet.
+
+#### Stage 2: all new commercial code uses isolated partitions from day one
+
+All newly added commercial frontend code must be created only under:
+- `apps/user/*`
+- `apps/admin/*`
+- `shared/*`
+
+This prevents the new commercial layer from polluting the old flat `src/api`, `src/views`, and `src/stores` layout.
+
+#### Stage 3: only extract old common infrastructure when necessary
+
+Move code into `shared/*` only when both user/admin partitions genuinely need it. Do not do speculative migration.
+
+This keeps the refactor small while still ensuring future code remains clean.
+
+### What remains hidden from users in Phase 1
+
+User-side isolated pages still must not expose:
+
+- provider names as operational concepts
+- upstream API keys
+- route policy / fallback internals
+- channel pool details
+- admin pricing controls
+
+Users focus only on:
+- agent
+- knowledge base
+- chat
+- balance
+- billing details
+
+Admins focus on:
+- user account operations
+- manual recharge
+- model-channel allocation
+- pricing / availability controls when enabled
+
+### Frontend-first execution order under the approved isolation model
+
+#### Layer A: isolated frontend skeleton first
+
+1. Add `shared/api` and `shared/auth` primitives or adapters.
+2. Add `apps/user/router/routes.ts` and `apps/admin/router/routes.ts`.
+3. Add user/admin API wrappers in their own app partitions.
+4. Add `apps/user/stores/account.ts` and `apps/admin/stores/adminCommercial.ts`.
+5. Add isolated user/admin views and components.
+6. Update root router and root menu assembler to consume those partitions.
+
+#### Layer B: backend contract alignment second
+
+1. Freeze request/response DTOs used by user/admin partitions.
+2. Implement backend wallet/billing/admin APIs against those contracts.
+3. Replace temporary fallback loading with real API integration.
+4. Tighten unauthorized / forbidden / insufficient-balance handling.
+
+### UI consistency constraints
+
+All frontend work in Phase 1 must preserve the current WeKnora visual language and interaction style. User-side and admin-side code are isolated structurally, but they must still feel like one product.
+
+#### Visual consistency rules
+
+- reuse the current color system, spacing rhythm, border radius, shadows, and typography hierarchy
+- match the existing card, table, form, dialog, empty-state, and loading-state styles
+- prefer reusing existing generic components before creating new visual variants
+- if a new component is required, align its spacing, icon style, button style, and feedback states with current WeKnora pages
+
+#### Interaction consistency rules
+
+- keep the existing platform navigation pattern, including left-side menu and main content layout
+- keep current feedback behavior for loading, success, warning, error, and empty states
+- use the same interaction expectations for dialogs, forms, tables, filters, and pagination
+- admin pages may be denser in information, but must not introduce a separate visual system
+
+#### Implementation rules for UI changes
+
+- isolate code structure with `apps/user` and `apps/admin`, but do not fork the design language
+- check existing components such as `UserMenu.vue`, `menu.vue`, selector components, dialog components, and list/sidebar patterns before creating new UI
+- avoid introducing a new admin dashboard style that looks disconnected from the current product
+- if a backend feature is unfinished, hide the entry or use a restrained placeholder state instead of shipping a visually inconsistent temporary page
+
+### Guardrails
+
+- no second frontend project in Phase 1
+- no shared business logic between user and admin apps
+- no new commercial code under old flat `src/views/account` or `src/views/admin` paths
+- no provider/channel details exposed to users
+- no `wechat_v1` changes in this stage
+- if an admin page is not ready, hide it instead of leaking partial behavior
+
 ### Backend track
 1. Create wallet / ledger / recharge / usage tables and types.
 2. Add repositories for wallet, recharge, usage, and model channels.
@@ -845,13 +1121,14 @@ Defer until the WeKnora control plane is stable:
 
 ## Recommended Phase 1 start sequence
 
-1. Database schema and backend domain types
-2. Repository and service layer
-3. Chat billing closure
-4. Admin recharge + model-channel APIs
-5. User wallet/billing pages
-6. Admin pages
-7. Control-plane verification
+1. Finalize `apps/user + apps/admin + shared` isolation boundaries
+2. Add isolated frontend skeleton: shared primitives, user/admin route modules, partitioned stores and pages
+3. Freeze frontend-backend contract for wallet, billing, recharge, and admin pages
+4. Implement backend schema and domain types against that contract
+5. Implement repository and service layer
+6. Add chat billing closure and admin APIs
+7. Connect real backend data into the isolated user/admin frontend partitions
+8. Run control-plane verification
 
 ## Phase 1 scope decision summary
 

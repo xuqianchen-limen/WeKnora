@@ -53,3 +53,7 @@ docker compose build `
   --build-arg GOPROXY=https://goproxy.cn,direct `
   --build-arg PIP_INDEX_URL=https://mirrors.cloud.tencent.com/pypi/simple/ `
   --build-arg UV_INDEX_URL=https://mirrors.cloud.tencent.com/pypi/simple/
+
+
+开发模式：
+docker compose -f docker-compose.dev.yml up -d
