@@ -28,7 +28,7 @@ RUN go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate
 COPY go.mod go.sum ./
 RUN --mount=type=cache,target=/go/pkg/mod go mod download
 COPY cmd/download cmd/download
-RUN go run cmd/download/duckdb/duckdb.go
+# RUN go run cmd/download/duckdb/duckdb.go
 COPY . .
 
 # Get version and commit info for build injection
@@ -57,25 +57,50 @@ ARG APK_MIRROR_ARG
 # Create a non-root user first
 RUN useradd -m -s /bin/bash appuser
 
+# RUN if [ -n "$APK_MIRROR_ARG" ]; then \
+#         sed -i "s@deb.debian.org@${APK_MIRROR_ARG}@g" /etc/apt/sources.list.d/debian.sources; \
+#     fi && \
+#     apt-get update && \
+#     apt-get install -y --no-install-recommends \
+#         build-essential postgresql-client default-mysql-client ca-certificates tzdata sed curl bash vim wget \
+#         libsqlite3-0 \
+#         python3 python3-pip python3-dev libffi-dev libssl-dev \
+#         nodejs npm \
+#         gosu && \
+#     python3 -m pip install --break-system-packages --upgrade pip setuptools wheel && \
+#     mkdir -p /home/appuser/.local/bin && \
+#     curl -LsSf https://astral.sh/uv/install.sh | CARGO_HOME=/home/appuser/.cargo UV_INSTALL_DIR=/home/appuser/.local/bin sh && \
+#     chown -R appuser:appuser /home/appuser && \
+#     ln -sf /home/appuser/.local/bin/uvx /usr/local/bin/uvx && \
+#     chmod +x /usr/local/bin/uvx && \
+#     apt-get clean && \
+#     rm -rf /var/lib/apt/lists/*
+
+# 1. 基础系统包 (使用镜像源)
 RUN if [ -n "$APK_MIRROR_ARG" ]; then \
         sed -i "s@deb.debian.org@${APK_MIRROR_ARG}@g" /etc/apt/sources.list.d/debian.sources; \
     fi && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential postgresql-client default-mysql-client ca-certificates tzdata sed curl bash vim wget \
-        libsqlite3-0 \
-        python3 python3-pip python3-dev libffi-dev libssl-dev \
-        nodejs npm \
-        gosu && \
-    python3 -m pip install --break-system-packages --upgrade pip setuptools wheel && \
-    mkdir -p /home/appuser/.local/bin && \
-    curl -LsSf https://astral.sh/uv/install.sh | CARGO_HOME=/home/appuser/.cargo UV_INSTALL_DIR=/home/appuser/.local/bin sh && \
-    chown -R appuser:appuser /home/appuser && \
+        libsqlite3-0 python3 python3-pip python3-dev libffi-dev libssl-dev nodejs npm gosu
+
+# 2. Python 环境升级 (使用镜像源)
+RUN python3 -m pip install --break-system-packages --upgrade pip setuptools wheel
+
+# 3. 安装 UV (这是最容易卡住的海外下载点)
+# 我们加上 --connect-timeout 防止它死等
+RUN mkdir -p /home/appuser/.local/bin && \
+    curl -LsSf --connect-timeout 20 https://astral.sh/uv/install.sh | \
+    CARGO_HOME=/home/appuser/.cargo UV_INSTALL_DIR=/home/appuser/.local/bin sh
+
+# 4. 权限与清理
+RUN chown -R appuser:appuser /home/appuser && \
     ln -sf /home/appuser/.local/bin/uvx /usr/local/bin/uvx && \
     chmod +x /usr/local/bin/uvx && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
+    
 # Create data directories and set permissions
 RUN mkdir -p /data/files && \
     chown -R appuser:appuser /app /data/files
@@ -92,7 +117,7 @@ COPY --from=builder /app/dataset/samples ./dataset/samples
 COPY --from=builder /app/skills/preloaded ./skills/preloaded
 # Keep a read-only backup so bind-mount cannot erase built-in skills
 COPY --from=builder /app/skills/preloaded ./skills/_builtin
-COPY --from=builder /root/.duckdb /home/appuser/.duckdb
+# COPY --from=builder /root/.duckdb /home/appuser/.duckdb
 COPY --from=builder /app/WeKnora .
 
 # Copy and make entrypoint script executable
