@@ -43,4 +43,6 @@ web/
 server
 frontend/.vite
 frontend/chrome-extension/
-WeKnora-Chrome-Extension
+WeKnora-Chrome-Extensionvenv_weknora/
+postgresql-17-pg-search_0.21.14-1PARADEDB-jammy_amd64.deb
+setup_github_ssh.sh

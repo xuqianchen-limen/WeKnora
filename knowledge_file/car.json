@@ -1,0 +1,194 @@
+[
+  {
+    "standard_question": "What are the main model lines of Mercedes-Benz?",
+    "answers": [
+      "Mercedes-Benz sedan lineup includes: A-Class (entry-level), C-Class (mid-size), E-Class (mid-large), and S-Class (flagship luxury)",
+      "The SUV lineup includes: GLA, GLB, GLC, GLE, and GLS",
+      "Coupe and sports models include the CLA, CLS, and AMG GT series",
+      "The high-performance AMG lineup and the all-electric EQ series are also key product lines"
+    ],
+    "similar_questions": [
+      "What series does Mercedes-Benz offer?",
+      "What models does Mercedes-Benz make?",
+      "Can you introduce the Mercedes-Benz product lineup?"
+    ],
+    "negative_questions": [
+      "What are BMW's model lines?",
+      "What models does Audi offer?"
+    ],
+    "tag_name": "Product Overview"
+  },
+  {
+    "standard_question": "What is the difference between the Mercedes-Benz C-Class and E-Class?",
+    "answers": [
+      "The C-Class is a mid-size luxury sedan with a more compact body and a relatively lower price point, making it popular among younger buyers",
+      "The E-Class is a mid-large luxury sedan with a longer wheelbase, more rear legroom, and a stronger business-oriented feel",
+      "The E-Class generally offers higher-grade materials, features, and technology compared to the C-Class",
+      "In terms of pricing, the E-Class starting price is typically $10,000–$20,000 higher than the C-Class"
+    ],
+    "similar_questions": [
+      "C-Class or E-Class — which one is better?",
+      "How do I choose between the C-Class and E-Class?",
+      "Is there a big difference between the C-Class and E-Class?"
+    ],
+    "negative_questions": [
+      "What is the difference between the BMW 3 Series and 5 Series?",
+      "Should I get a C-Class or a GLC?"
+    ],
+    "tag_name": "Car Selection Guide"
+  },
+  {
+    "standard_question": "What is the warranty policy for a new Mercedes-Benz?",
+    "answers": [
+      "New Mercedes-Benz vehicles come with a 4-year/50,000-mile limited warranty, whichever comes first",
+      "The powertrain warranty covers 4 years or 50,000 miles, with roadside assistance included for the same period",
+      "Certified Pre-Owned (CPO) vehicles receive an additional 1-year/unlimited-mile limited warranty on top of the remaining factory warranty",
+      "Extended warranty options are available through authorized Mercedes-Benz dealerships"
+    ],
+    "similar_questions": [
+      "How long is the Mercedes-Benz warranty?",
+      "What does the Mercedes-Benz factory warranty cover?",
+      "Does Mercedes-Benz offer an extended warranty?"
+    ],
+    "negative_questions": [
+      "How do I purchase car insurance for my Mercedes-Benz?",
+      "Does a used Mercedes-Benz come with a warranty?"
+    ],
+    "tag_name": "After-Sales Service"
+  },
+  {
+    "standard_question": "What financing options are available when buying a Mercedes-Benz?",
+    "answers": [
+      "Mercedes-Benz Financial Services offers conventional installment loans, lease agreements, and balloon payment plans",
+      "Typical financing requires a down payment of around 10–20%, with loan terms ranging from 24 to 72 months",
+      "Special promotional offers such as 0% APR or low-rate financing are available on select models — check the official website for current deals",
+      "A dedicated finance manager at each dealership can help design a personalized financing plan"
+    ],
+    "similar_questions": [
+      "Can I finance a Mercedes-Benz?",
+      "How do I apply for a Mercedes-Benz loan?",
+      "What are the interest rates for Mercedes-Benz financing?"
+    ],
+    "negative_questions": [
+      "How do I invest in Mercedes-Benz stock?",
+      "How can I apply for a job at a Mercedes-Benz dealership?"
+    ],
+    "tag_name": "Financing Options"
+  },
+  {
+    "standard_question": "What is the delivery process for a new Mercedes-Benz?",
+    "answers": [
+      "After signing the purchase agreement and paying the deposit, you will be notified when the vehicle arrives at the dealership",
+      "Bring your driver's license, proof of insurance, and remaining payment on delivery day",
+      "A sales consultant will walk you through a full exterior and interior inspection to confirm the vehicle is damage-free",
+      "A Pre-Delivery Inspection (PDI) is performed before handover to ensure all systems are functioning properly",
+      "Your sales consultant will provide a thorough vehicle orientation covering all key features and technology"
+    ],
+    "similar_questions": [
+      "What do I need to pick up my new Mercedes-Benz?",
+      "How does the Mercedes-Benz delivery process work?",
+      "What should I check when taking delivery of a new Mercedes-Benz?"
+    ],
+    "negative_questions": [
+      "How do I transfer ownership of a used Mercedes-Benz?",
+      "How do I register my Mercedes-Benz?"
+    ],
+    "tag_name": "Purchase Process"
+  },
+  {
+    "standard_question": "What all-electric EQ models does Mercedes-Benz offer?",
+    "answers": [
+      "The Mercedes-Benz EQ lineup currently includes: EQA, EQB, EQC, EQE, EQS, EQE SUV, and EQS SUV",
+      "The EQA and EQB are compact electric SUVs with an EPA-estimated range of approximately 220–260 miles",
+      "The EQE sedan offers up to 300+ miles of range, while the flagship EQS can exceed 350 miles on a single charge",
+      "All EQ models support DC fast charging; select models support up to 200 kW charging speeds"
+    ],
+    "similar_questions": [
+      "Does Mercedes-Benz make electric cars?",
+      "How far can a Mercedes-Benz EV go on one charge?",
+      "What are the models in the EQ series?"
+    ],
+    "negative_questions": [
+      "Does Mercedes-Benz offer hybrid vehicles?",
+      "How does the Mercedes-Benz EQ compare to Tesla?"
+    ],
+    "tag_name": "Electric Vehicles"
+  },
+  {
+    "standard_question": "How can I schedule a test drive at a Mercedes-Benz dealership?",
+    "answers": [
+      "You can book a test drive online at the official Mercedes-Benz website (mbusa.com) by selecting your preferred model and dealership",
+      "Alternatively, call your nearest authorized Mercedes-Benz dealership directly or use the Mercedes me app to schedule",
+      "A valid driver's license is required; test drives typically last 30–60 minutes",
+      "A sales consultant will accompany you and provide a full walkthrough of the vehicle's features during the drive"
+    ],
+    "similar_questions": [
+      "How do I book a Mercedes-Benz test drive?",
+      "Can I test drive a Mercedes-Benz before buying?",
+      "What do I need to bring for a Mercedes-Benz test drive?"
+    ],
+    "negative_questions": [
+      "How do I rent a Mercedes-Benz?",
+      "Does Mercedes-Benz offer a driving experience program?"
+    ],
+    "tag_name": "Sales Service"
+  },
+  {
+    "standard_question": "What personalization and customization options does Mercedes-Benz offer?",
+    "answers": [
+      "A wide range of exterior paint colors is available, including standard colors and premium designo finishes such as Manufaktur Diamond White or Obsidian Black Magno",
+      "Interior options include various leather grades, seat color combinations, and wood or metal trim selections",
+      "Package upgrades include the Driver Assistance Package, Premium Package, AMG Line Exterior, and Night Package, among others",
+      "AMG Line and Night Package add-ons enhance the sporty or blacked-out aesthetic",
+      "Select top-tier models such as the S-Class and Maybach support factory-order customization through the Mercedes-Benz Manufaktur program"
+    ],
+    "similar_questions": [
+      "Can I customize my Mercedes-Benz order?",
+      "What optional packages does Mercedes-Benz offer?",
+      "Can I choose the color of my Mercedes-Benz?"
+    ],
+    "negative_questions": [
+      "What aftermarket modifications are recommended for Mercedes-Benz?",
+      "How much does it cost to wrap a Mercedes-Benz?"
+    ],
+    "tag_name": "Personalization & Customization"
+  },
+  {
+    "standard_question": "How does the Mercedes-Benz trade-in process work?",
+    "answers": [
+      "You can get an estimated trade-in value online at mbusa.com or through tools like KBB and Edmunds before visiting the dealership",
+      "Bring your vehicle, title, registration, and any service records to the dealership for an in-person appraisal",
+      "The appraised value can be applied directly as a down payment toward your new Mercedes-Benz purchase",
+      "Mercedes-Benz Certified Pre-Owned (CPO) vehicles go through a 165-point inspection before being resold"
+    ],
+    "similar_questions": [
+      "Can I trade in my old car at a Mercedes-Benz dealership?",
+      "How do I get a trade-in quote for my car?",
+      "Does Mercedes-Benz accept trade-ins?"
+    ],
+    "negative_questions": [
+      "How do I sell my Mercedes-Benz privately?",
+      "Where can I buy a used Mercedes-Benz?"
+    ],
+    "tag_name": "Trade-In & Pre-Owned"
+  },
+  {
+    "standard_question": "What maintenance services does Mercedes-Benz recommend?",
+    "answers": [
+      "Mercedes-Benz recommends service intervals based on the ASSYST PLUS system, which monitors driving conditions and alerts you when service is due — typically every 10,000 miles or 1 year",
+      "Service A includes a synthetic motor oil replacement, oil filter replacement, fluid level checks, and a tire inflation check",
+      "Service B (every 2 years or 20,000 miles) includes all Service A items plus brake fluid exchange, cabin dust filter replacement, and a comprehensive vehicle inspection",
+      "Using only Mercedes-Benz Genuine Parts at an authorized service center is recommended to maintain vehicle warranty and performance"
+    ],
+    "similar_questions": [
+      "How often should I service my Mercedes-Benz?",
+      "What is included in a Mercedes-Benz Service A or B?",
+      "How do I know when my Mercedes-Benz needs maintenance?"
+    ],
+    "negative_questions": [
+      "Can I service my Mercedes-Benz at a third-party shop?",
+      "How do I reset the service light on my Mercedes-Benz?"
+    ],
+    "tag_name": "Maintenance & Service"
+  }
+]
